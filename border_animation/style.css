@@ -1,0 +1,79 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex--center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#border-animation {
+    height: 100vh;
+    padding: 60px;
+    text-align: center;
+}
+
+.card {
+    width: 320px;
+    height: 480px;
+    background-color: #181818;
+    border-radius: 10px;
+    position: relative;
+    cursor: default;
+    user-select: none;
+    overflow: hidden;
+    cursor: pointer;
+    }
+    
+.card > span {
+    color: #fff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+    position: absolute;
+    z-index: 1;
+}
+
+.card::before {
+    position: absolute;
+    content: '';
+    transform: rotate(45deg);
+    background-color: tomato;
+    width: 50%;
+    height: 180%;
+    }
+
+.card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: #181818;
+    border-radius: 8px;
+}
+    
+.card:hover::before{
+    animation: border-rotate 2.5s linear infinite forwards;
+}
+
+.card:hover::after {
+    inset: 5px;
+}
+
+@keyframes border-rotate {
+    0% {
+        transform: rotate(45deg);
+    }
+    50%{
+        filter: hue-rotate(350deg);
+    }
+    100% {
+        transform: rotate(405deg);
+    }
+}
+
+
+
