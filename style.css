@@ -16,6 +16,15 @@
     box-sizing: border-box;
 }
 
+/* common class */
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*  */
 .page-title {
     text-align: center;
     padding: 12px 0 24px;
