@@ -1,0 +1,44 @@
+#typewriter {
+    font-size: 16px;
+    color: #060630;
+    background: #fafafa;
+    height: 100vh;
+    width: 100vw;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.content {
+    font-family: monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    font-weight: 600;
+    font-size: 180%;
+    border-right: 2px solid;
+    margin-inline: auto;
+    animation: 
+        typing 8s steps(var(--steps)) infinite,
+        blinker 1s step-end infinite
+}
+
+@keyframes typing {
+    0%, 20% {
+        width: 0;
+    }
+    50%,70% {
+        width: 100%;
+    }
+    90%,100% {
+        width: 0;
+    }
+}
+
+@keyframes blinker {
+    50% {
+        border-right-color: transparent;
+    }
+}
